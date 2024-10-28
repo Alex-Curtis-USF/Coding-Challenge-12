@@ -23,6 +23,8 @@ function draw(e) {
     // Task 3
     // This is to have the drawing logic.
     const tool = document.querySelector('input[name="tool"]:checked').value;
+    // Task 4, There is more of task 4 at the bottom, but this needed to be in the drawing function.
+    ctx.strokeStyle = colorPicker.value; 
     
     // To clear the canvas.
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -61,3 +63,10 @@ canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', stopDrawing);
 canvas.addEventListener('mouseout', stopDrawing);
+
+// Task 4
+
+clearBtn.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
